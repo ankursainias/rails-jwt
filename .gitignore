@@ -16,6 +16,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/vender/*
 
 # Ignore uploaded files in development
 /storage/*
