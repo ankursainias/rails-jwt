@@ -2,14 +2,17 @@
 lock "~> 3.11.2"
 
 set :application, "rails-jwt"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "git@github.com:ankursainias/rails-jwt.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
+set :use_sudo, true
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
-
+set :deploy_to, "/home/deploy/rails-jwt"
+append :linked_files, "config/database.yml", "config/master.key"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+set :passenger_restart_with_touch, true
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
