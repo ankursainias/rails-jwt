@@ -24,7 +24,7 @@ role :app, %w{deploy@18.191.182.28}
 role :web, %w{deploy@18.191.182.28}
 role :db,  %w{deploy@18.191.182.28}
 
-set :stage, :staging
+set :stage, :production
 set :branch, 'master'
 
 
