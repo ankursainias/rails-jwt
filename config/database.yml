@@ -47,7 +47,7 @@ development:
   # username: root
 
 
-staging:
+production:
   <<: *default
   database:  jwt_staging
   # database: firezza-backend_development
