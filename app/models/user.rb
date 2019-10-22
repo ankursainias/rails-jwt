@@ -11,5 +11,6 @@ class User < ApplicationRecord
    searchable do
 						text :name
 						string :name
+						integer :id
 							end         	
 end

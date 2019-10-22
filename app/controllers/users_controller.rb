@@ -7,7 +7,7 @@ class UsersController < ApplicationController
    search = User.search do
     keywords(params[:q])
    end
-    render json: search.results, status: :ok
+    render json: search.results.to_json(:only => [:id, :name, :username,:email,:created_at]), status: :ok
   end
 
   # GET /users/{username}
