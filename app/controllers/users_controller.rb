@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
-  before_action :authorize_request, except: :create
-  before_action :find_user, except: %i[create index]
+  # before_action :authorize_request, except: :create
+  # before_action :find_user, except: %i[create index]
 
   # GET /users
   def index
-    @users = User.all
-    render json: @users, status: :ok
+   search = User.search do
+    keywords(params[:q])
+   end
+    render json: search.results, status: :ok
   end
 
   # GET /users/{username}
