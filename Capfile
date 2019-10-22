@@ -4,11 +4,6 @@ require "capistrano/setup"
 # Include default deployment tasks
 require "capistrano/deploy"
 
-require 'capistrano/rails'
-require 'capistrano/passenger'
-
-
-
 # Load the SCM plugin appropriate to your project:
 #
 # require "capistrano/scm/hg"
@@ -37,9 +32,10 @@ require "capistrano/rvm"
 require "capistrano/bundler"
 require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
-# require "capistrano/passenger"
+require "capistrano/passenger"
 set :rvm_type, :user
 set :rvm_ruby_version, '2.5.3'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+
