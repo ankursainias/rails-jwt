@@ -20,7 +20,7 @@ gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development. Not for use in production.
 gem 'progress_bar'
 
-gem 'sidekiq', '~> 6.0', '>= 6.0.2'
+gem 'sidekiq', '~> 6.2'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
