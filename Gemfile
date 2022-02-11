@@ -14,7 +14,7 @@ gem 'jwt'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 
 gem 'sunspot_rails'
 gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development. Not for use in production.
